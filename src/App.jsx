@@ -7,6 +7,7 @@ import TestsPage from "./pages/tests/TestsPage";
 import ContactPage from "./pages/contact/ContactPage";
 import Note from "./pages/notes/Note";
 import NewNote from "./pages/notes/NewNote";
+import TestLoader from "./components/TestLoader";
 
 const router = createBrowserRouter([
   {
@@ -32,6 +33,10 @@ const router = createBrowserRouter([
       {
         path: "testy",
         element: <TestsPage />,
+      },
+      {
+        path: "/testy/:testId",
+        element: <TestLoader />,
       },
       { path: "kontakt", element: <ContactPage /> },
     ],

@@ -6,7 +6,7 @@ function Nav() {
   return (
     <nav className={styles.nav}>
       <NavLink to={"/"} className={styles.logo}>
-        Logo
+        <img src={"./img/logo.png"} width="120rem" alt="Logo" />
       </NavLink>
       <ul>
         <li>
