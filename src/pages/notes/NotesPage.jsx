@@ -14,7 +14,7 @@ function NotesPage() {
       setIsLoading(true);
       const { data: notes, error } = await supabase.from("notes").select("");
       setNotes(
-        notes.sort((a, b) => new Date(a.createdWhen) - new Date(b.createdWhen))
+        notes.sort((a, b) => new Date(b.createdWhen) - new Date(a.createdWhen))
       );
       setFilteredNotes(notes);
       setIsLoading(false);
@@ -45,11 +45,11 @@ function NotesPage() {
 
     if (filteredOption === "date_latest") {
       filteredValues.sort(
-        (a, b) => new Date(a.createdWhen) - new Date(b.createdWhen)
+        (a, b) => new Date(b.createdWhen) - new Date(a.createdWhen)
       );
     } else if (filteredOption === "date_oldest") {
       filteredValues.sort(
-        (a, b) => new Date(b.createdWhen) - new Date(a.createdWhen)
+        (a, b) => new Date(a.createdWhen) - new Date(b.createdWhen)
       );
     } else if (filteredOption === "alfa_az") {
       filteredValues.sort((a, b) => a.title.localeCompare(b.title));

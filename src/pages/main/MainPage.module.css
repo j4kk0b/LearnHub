@@ -1,30 +1,40 @@
 .container {
-  padding: 1rem 1rem;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr 1fr 1fr;
+  gap: 4rem;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.2rem;
 
-  display: flex;
-  flex-direction: column;
-  gap: 2rem;
+  height: 100vh;
 }
 
-.mainContent
-{
-  display:flex;
-  flex-direction: row;
-  gap:5rem;
-  font-size:1.2rem;
-}
-
-.notesBox
-{
+.notesBox {
   background-color: #e9e9e9;
   padding: 1rem;
   border-radius: 1rem;
+  grid-row: 2 / 4;
+  grid-column: 2;
 }
-
+.LastTests {
+  background-color: #ece5e5;
+  padding: 1rem;
+  border-radius: 1rem;
+  grid-row: 3 / 5;
+  grid-column: 1;
+}
+.testToDo {
+  background-color: #edfee4;
+  padding: 1rem;
+  border-radius: 1rem;
+  grid-column: 2;
+}
 .title {
   font-size: 3rem;
   font-weight: 200;
   text-align: center;
+  grid-column: 1 / 3;
   position: relative;
 }
 
@@ -41,34 +51,44 @@
   translate: -50% -50%;
 }
 
-.titletext
-{
+.titletext {
   font-size: 3rem;
   font-weight: 200;
   text-align: center;
   position: relative;
 }
 
-.Notes
-{
+.Notes {
   list-style-type: none;
 }
 
-.Notes a:link, .Notes:visited{
+.Notes a:link,
+.Notes:visited {
   text-decoration: none;
+  list-style: none;
 }
 
 .Notes li {
   font-weight: 400;
-  color:black;
+  color: black;
   text-decoration: none;
+  padding: 1rem 0.4rem;
 }
 
-.notesList {
-  list-style: none;
+.Notes :not(:last-child) li {
+  border-bottom: 1px solid rgba(0, 0, 0, 0.103);
 }
 
-.box
-{
-  width:70rem;
+.link:visited,
+.link:link {
+  color: var(--primary-black);
+  transition: 0.3s ease;
+}
+
+.link:hover {
+  color: var(--primary-orange);
+}
+
+.date {
+  color: var(--primary-blue);
 }

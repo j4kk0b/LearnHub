@@ -34,7 +34,6 @@
 .nav ul li a:visited {
   display: inline-block;
   color: var(--primary-white);
-  text-decoration: uppercase;
   width: 100%;
   height: 100%;
   padding: 0.8rem 0 0.8rem 1.2rem;
@@ -46,15 +45,59 @@
   font-size: 1.2rem;
   border-top: 1px solid rgba(0, 0, 0, 0.2);
   border-bottom: 1px solid rgba(0, 0, 0, 0.2);
+  transition: 0.3s ease;
 }
 
 .nav ul li:hover {
   background-color: var(--primary-black);
+}
+
+.login {
+  margin-top: auto;
+  margin-bottom: 1rem;
+
+  color: var(--primary-white);
+  text-decoration: uppercase;
+  width: 100%;
   transition: 0.3s ease;
+}
+
+.login a:link,
+.login a:visited {
+  display: inline-block;
+  width: 100%;
+  height: 100%;
+  color: var(--primary-white);
+  padding: 0.8rem 0 0.8rem 1.2rem;
+}
+
+.login:hover {
+  background-color: var(--primary-black);
 }
 
 :global(.active) {
   background-color: var(--primary-blue);
   box-shadow: 0.1rem 0.1rem 0.2rem var(--primary-blue);
   font-weight: 500;
+}
+
+.logout {
+  display: inline-block;
+  width: 100%;
+  height: 100%;
+  color: var(--primary-white);
+  padding: 0.8rem 0 0.8rem 1.2rem;
+  cursor: pointer;
+  transition: 0.3s ease;
+  font-size: 1rem;
+  border-top: 1px solid rgba(0, 0, 0, 0.2);
+  border-bottom: 1px solid rgba(0, 0, 0, 0.2);
+  background-color: var(--primary-blue);
+
+  display: flex;
+  align-items: center;
+}
+
+.logout:hover {
+  background-color: red;
 }

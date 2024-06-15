@@ -1,6 +1,7 @@
 import { NavLink } from "react-router-dom";
 import styles from "./NotesTable.module.css";
 import useDate from "../../hooks/useDate";
+import Rating from "../../components/Rating";
 
 function NotesTable({ notes }) {
   return (
@@ -20,7 +21,14 @@ function NotesTable({ notes }) {
             return (
               <NavLink key={note.id} to={`${note.id}`}>
                 <li>
-                  <div>{note.title}</div>
+                  <div>
+                    {note.title}
+                    <br />
+                    <Rating
+                      likes={note.numOfLikes}
+                      dislikes={note.numOfDislikes}
+                    />
+                  </div>
                   <div>{note.category}</div>
                   <div>{note.description.slice(0, 20)}...</div>
                   <div>{useDate(note.createdWhen)}</div>

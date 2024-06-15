@@ -8,6 +8,9 @@ import ContactPage from "./pages/contact/ContactPage";
 import Note from "./pages/notes/Note";
 import NewNote from "./pages/notes/NewNote";
 import TestLoader from "./components/TestLoader";
+import Login from "./pages/auth/Login";
+import RequireAuth from "./pages/auth/RequireAuth";
+import Rank from "./pages/rank/Rank";
 
 const router = createBrowserRouter([
   {
@@ -24,7 +27,11 @@ const router = createBrowserRouter([
       },
       {
         path: "/notatki/dodaj",
-        element: <NewNote />,
+        element: (
+          <RequireAuth redirectTo={"/login"}>
+            <NewNote />
+          </RequireAuth>
+        ),
       },
       {
         path: "/notatki/:noteId",
@@ -38,7 +45,9 @@ const router = createBrowserRouter([
         path: "/testy/:testId",
         element: <TestLoader />,
       },
+      { path: "ranking", element: <Rank /> },
       { path: "kontakt", element: <ContactPage /> },
+      { path: "login", element: <Login /> },
     ],
   },
 ]);

@@ -1,0 +1,47 @@
+.container {
+  padding: 1rem;
+  background-color: #e9e9e9;
+  box-shadow: 0.1rem 0.1rem 0.5rem rgba(0, 0, 0, 0.2);
+}
+
+.form {
+  margin-top: 2rem;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1.5rem;
+  padding: 1rem;
+}
+
+.formCell {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+
+.formCell label {
+  letter-spacing: 2px;
+}
+
+.formCell input,
+.formCell textarea {
+  border: none;
+  background: none;
+  background-color: #c5c5c562;
+  padding: 0.3rem;
+  font-size: 1rem;
+  font-family: inherit;
+  border-radius: 0.2rem;
+}
+
+.btn {
+  grid-column-start: 1;
+  grid-column-end: 3;
+  cursor: pointer;
+
+  transition: 0.3s ease;
+  padding: 0.4rem 0;
+}
+
+.btn:hover {
+  background-color: var(--primary-green);
+}

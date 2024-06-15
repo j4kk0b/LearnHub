@@ -1,0 +1,23 @@
+.container {
+  margin-top: 0.4rem;
+}
+
+.cell {
+  margin-right: 1rem;
+}
+
+.cell svg {
+  width: 15px;
+  height: 15px;
+}
+
+.cell span {
+  margin-left: -0.5rem;
+}
+
+.container:hover,
+.cell,
+.cell svg,
+.cell span {
+  color: black;
+}

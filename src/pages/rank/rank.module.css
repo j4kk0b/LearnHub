@@ -1,0 +1,45 @@
+.container {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+.RankList {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.RankList li {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  margin-left: 2rem;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.103);
+  padding-bottom: 1.3rem;
+}
+
+.Title {
+  font-size: 3rem;
+  font-weight: 200;
+  text-align: center;
+  position: relative;
+}
+
+.header {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  list-style: none;
+  text-align: left;
+  background-color: var(--primary-blue);
+  border-radius: 1rem;
+  box-shadow: 0.1rem 0.1rem 0.5rem rgba(0, 0, 0, 0.05);
+  margin-top: 3rem;
+}
+
+.header li {
+  font-size: 1.2rem;
+  color: var(--primary-white);
+  text-transform: uppercase;
+  font-weight: 400;
+  padding: 0.2rem 0.8rem;
+}

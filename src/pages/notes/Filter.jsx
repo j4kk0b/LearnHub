@@ -2,9 +2,11 @@ import { useState, useEffect } from "react";
 import styles from "./Filter.module.css";
 import { NavLink } from "react-router-dom";
 import Search from "../../components/Search";
+import useAuth from "../../hooks/useAuth";
 
 function Filter({ onFilterBySearch, onFilterByOption }) {
   const [filterOption, setFilterOption] = useState("date_latest");
+  const isAuthenticated = useAuth();
 
   useEffect(() => {
     onFilterByOption(filterOption);
@@ -12,9 +14,11 @@ function Filter({ onFilterBySearch, onFilterByOption }) {
 
   return (
     <div className={styles.container}>
-      <NavLink className={styles.btn} to={"dodaj"}>
-        Dodaj notatkę
-      </NavLink>
+      {isAuthenticated && (
+        <NavLink className={styles.btn} to={"dodaj"}>
+          Dodaj notatkę
+        </NavLink>
+      )}
 
       <Search callbackFn={onFilterBySearch} />
 
