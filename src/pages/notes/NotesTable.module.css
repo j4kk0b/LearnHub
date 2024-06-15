@@ -1,0 +1,43 @@
+.container {
+  background-color: #e9e9e9;
+  padding: 1rem;
+  border-radius: 1rem;
+}
+
+.header {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  list-style: none;
+  text-align: left;
+  background-color: var(--primary-blue);
+  border-radius: 1rem;
+}
+
+.header li {
+  font-size: 1.2rem;
+  color: var(--primary-white);
+  text-transform: uppercase;
+  font-weight: 400;
+  padding: 0.2rem 0.8rem;
+}
+
+.notesList {
+  list-style: none;
+}
+
+.notesList a:link,
+.notesList a:visited {
+  text-decoration: none;
+  color: var(--primary-black);
+}
+
+.notesList a:hover {
+  color: var(--primary-orange);
+  transition: 0.3s ease;
+}
+
+.notesList li {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  margin-top: 1rem;
+}

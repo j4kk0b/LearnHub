@@ -1,0 +1,27 @@
+.container {
+  padding: 1rem 1rem;
+
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+.title {
+  font-size: 3rem;
+  font-weight: 200;
+  text-align: center;
+  position: relative;
+}
+
+.title::before {
+  content: "e-Zżynka";
+  position: absolute;
+  font-weight: 600;
+  opacity: 0.1;
+  color: #828282;
+  font-size: 4rem;
+  letter-spacing: 2rem;
+  top: 50%;
+  left: 50%;
+  translate: -50% -50%;
+}
