@@ -6,6 +6,7 @@ import NotesPage from "./pages/notes/NotesPage";
 import TestsPage from "./pages/tests/TestsPage";
 import ContactPage from "./pages/contact/ContactPage";
 import Note from "./pages/notes/Note";
+import NewNote from "./pages/notes/NewNote";
 
 const router = createBrowserRouter([
   {
@@ -19,6 +20,10 @@ const router = createBrowserRouter([
       {
         path: "notatki",
         element: <NotesPage />,
+      },
+      {
+        path: "/notatki/dodaj",
+        element: <NewNote />,
       },
       {
         path: "/notatki/:noteId",

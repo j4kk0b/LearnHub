@@ -2,6 +2,8 @@
   background-color: #e9e9e9;
   padding: 1rem;
   border-radius: 1rem;
+
+  box-shadow: 0.1rem 0.1rem 0.5rem rgba(0, 0, 0, 0.2);
 }
 
 .header {
@@ -11,6 +13,7 @@
   text-align: left;
   background-color: var(--primary-blue);
   border-radius: 1rem;
+  box-shadow: 0.1rem 0.1rem 0.5rem rgba(0, 0, 0, 0.05);
 }
 
 .header li {
@@ -23,6 +26,7 @@
 
 .notesList {
   list-style: none;
+  padding: 0.2rem 0.8rem;
 }
 
 .notesList a:link,
@@ -40,4 +44,15 @@
   display: grid;
   grid-template-columns: repeat(4, 1fr);
   margin-top: 1rem;
+  padding-bottom: 1rem;
+}
+
+.notesList :not(:last-child) li {
+  border-bottom: 1px solid rgba(0, 0, 0, 0.103);
+}
+
+.noNotes {
+  text-align: center;
+  margin: 4rem 0 3rem 0;
+  font-weight: 400;
 }

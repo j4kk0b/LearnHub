@@ -1,0 +1,52 @@
+.container {
+  display: flex;
+  justify-content: space-around;
+  margin-bottom: 5rem;
+  padding: 0.8rem 1.2rem;
+  border-radius: 1rem;
+  box-shadow: 0.1rem 0.1rem 0.5rem rgba(0, 0, 0, 0.2);
+  background-color: #e9e9e9;
+  align-items: center;
+  box-shadow: 0.1rem 0.1rem 0.5rem rgba(0, 0, 0, 0.2);
+}
+
+.btn:link,
+.btn:visited {
+  text-decoration: none;
+  text-transform: uppercase;
+  padding: 0.4rem 0.8rem;
+  border-radius: 1rem;
+  font-weight: 400;
+  transition: 0.3s ease;
+  color: #fff;
+  background-color: var(--primary-blue);
+}
+
+.btn:hover {
+  background-color: var(--primary-blue-lighter);
+  transform: scale(1.02);
+  box-shadow: 0.1rem 0.1rem 0.5rem rgba(0, 0, 0, 0.2);
+}
+
+.btn:active {
+  transform: scale(1.01);
+  box-shadow: 0.1rem 0.1rem 0.5rem rgba(0, 0, 0, 0.05);
+}
+
+.selectContainer {
+  padding: 0.3rem 0.5rem;
+  background-color: var(--primary-blue);
+  border-radius: 2rem;
+}
+
+.selectContainer span {
+  color: #fff;
+}
+
+.select {
+  border: none;
+  font-size: 1rem;
+  padding: 0.2rem 0.6rem;
+  border-radius: 1rem;
+  margin-left: 0.4rem;
+}

@@ -1,16 +1,27 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import styles from "./Filter.module.css";
+import { NavLink } from "react-router-dom";
+import Search from "../../components/Search";
 
-function Filter() {
+function Filter({ onFilterBySearch, onFilterByOption }) {
   const [filterOption, setFilterOption] = useState("date_latest");
 
-  return (
-    <div>
-      <button>Dodaj notatkę</button>
+  useEffect(() => {
+    onFilterByOption(filterOption);
+  }, [filterOption]);
 
-      <div>
-        Sortowanie po:
+  return (
+    <div className={styles.container}>
+      <NavLink className={styles.btn} to={"dodaj"}>
+        Dodaj notatkę
+      </NavLink>
+
+      <Search callbackFn={onFilterBySearch} />
+
+      <div className={styles.selectContainer}>
+        <span>Sortowanie po:</span>
         <select
+          className={styles.select}
           value={filterOption}
           onChange={(e) => setFilterOption(e.target.value)}
         >
